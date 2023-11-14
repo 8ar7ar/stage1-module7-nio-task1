@@ -36,7 +36,7 @@ public class FileReaderTest {
         try {
             Files.delete(TEST_FILE);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new UnableToReadUserDataException("Could not Read User data", e);
         }
     }
 
