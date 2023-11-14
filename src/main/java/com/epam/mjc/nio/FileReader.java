@@ -19,7 +19,7 @@ public class FileReader {
             email = reader.readLine().split(": ")[1];
             phone = Long.parseLong(reader.readLine().split(": ")[1]);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new UnableToReadUserDataException("Unable to read User data...", e);
         }
 
         return new Profile(name, age, email, phone);
